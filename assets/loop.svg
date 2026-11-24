@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="230" viewBox="0 0 820 230"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#0b2a2f"/></linearGradient>
+<linearGradient id="t" x1="0" x2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker></defs><style>
+.h{font:700 15px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#e6edf3;letter-spacing:2px}
+.f{font:500 11px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#8b949e}
+.v{font:700 36px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#2dd4bf;text-anchor:middle}
+.u{font:600 13px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#e6edf3;text-anchor:middle}
+.s{font:500 11.5px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#8b949e;text-anchor:middle}
+.who{font:700 17px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#e6edf3;text-anchor:middle}
+.role{font:700 12px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#2dd4bf;text-anchor:middle;letter-spacing:1px}
+.d{font:500 12px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#c9d1d9;text-anchor:middle}
+.box{fill:#0d1117;stroke:#2dd4bf;stroke-opacity:.45}
+.hum{fill:#0d1117;stroke:#fbbf24;stroke-opacity:.7}
+.sep{stroke:#2dd4bf;stroke-opacity:.18}
+.ar{stroke:#2dd4bf;stroke-width:1.6;fill:none;marker-end:url(#a)}
+.tag{font:600 11px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#5eead4}
+</style><rect width="820" height="230" rx="14" fill="url(#g)" stroke="#2dd4bf" stroke-opacity=".35"/><text x="28" y="38" class="h">🌙 LOOP ENGINEERING</text><text x="792" y="38" class="f" text-anchor="end">実装を夜中に片付ける仕組み</text><rect x="28" y="62" width="170" height="104" rx="10" class="box"/><text x="113.0" y="94" class="u" style="font-size:14px">☀️ 昼 / Human</text><text x="113.0" y="124" class="d" style="font-size:11px">受入条件と設計判断を</text><text x="113.0" y="142" class="d" style="font-size:11px">曖昧さゼロまで issue に書く</text><line x1="202" y1="114.0" x2="224" y2="114.0" class="ar"/><rect x="228" y="62" width="170" height="104" rx="10" class="box"/><text x="313.0" y="94" class="u" style="font-size:14px">🏷️ Label</text><text x="313.0" y="124" class="d" style="font-size:11px">ready-for-loop を貼る</text><text x="313.0" y="142" class="d" style="font-size:11px">ループが拾う対象を決める</text><line x1="402" y1="114.0" x2="424" y2="114.0" class="ar"/><rect x="428" y="62" width="170" height="104" rx="10" class="box"/><text x="513.0" y="94" class="u" style="font-size:14px">🌙 夜 / AI</text><text x="513.0" y="124" class="d" style="font-size:11px">寝る前に skill を 1 発</text><text x="513.0" y="142" class="d" style="font-size:11px">無人で 1 件ずつ PR まで</text><line x1="602" y1="114.0" x2="624" y2="114.0" class="ar"/><rect x="628" y="62" width="170" height="104" rx="10" class="box"/><text x="713.0" y="94" class="u" style="font-size:14px">🌅 朝 / Review</text><text x="713.0" y="124" class="d" style="font-size:11px">AI レビューで 3 分類</text><text x="713.0" y="142" class="d" style="font-size:11px">詰まりは理由付きで返る</text><text x="410.0" y="204" class="tag" text-anchor="middle">昼は人間の時間、夜は AI の時間。── 朝には、レビュー待ちの PR が並んでいる</text></svg>
