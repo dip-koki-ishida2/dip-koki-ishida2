@@ -76,11 +76,11 @@ def main():
     since = created.strftime("%Y.%m")
 
     stats = [
-        ("Total Contributions", f"{total:,}", f"since {since}"),
-        ("Current Streak", f"{current}", "days"),
-        ("Longest Streak", f"{longest}", "days"),
-        ("Active Days", f"{active}", "days"),
-        ("Best Day", f"{best}", "contributions"),
+        ("総コントリビューション", f"{total:,}", f"{since} から"),
+        ("現在の連続日数", f"{current}", "日"),
+        ("最長の連続日数", f"{longest}", "日"),
+        ("活動した日数", f"{active}", "日"),
+        ("1 日の最多", f"{best}", "件"),
     ]
 
     W, H = 820, 210
@@ -109,22 +109,22 @@ def main():
 <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#0b2a2f"/></linearGradient>
 <linearGradient id="t" x1="0" x2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
 <style>
-.v{{font:700 34px 'Segoe UI',Ubuntu,sans-serif;fill:url(#t);text-anchor:middle}}
-.u{{font:500 12px 'Segoe UI',Ubuntu,sans-serif;fill:#5eead4;text-anchor:middle;opacity:.8}}
-.l{{font:600 13px 'Segoe UI',Ubuntu,sans-serif;fill:#c9d1d9;text-anchor:middle}}
-.h{{font:700 15px 'Segoe UI',Ubuntu,sans-serif;fill:#e6edf3;letter-spacing:2px}}
-.f{{font:500 11px 'Segoe UI',Ubuntu,sans-serif;fill:#8b949e}}
+.v{{font:700 34px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:url(#t);text-anchor:middle}}
+.u{{font:500 12px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#5eead4;text-anchor:middle;opacity:.8}}
+.l{{font:600 13px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#c9d1d9;text-anchor:middle}}
+.h{{font:700 15px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#e6edf3;letter-spacing:2px}}
+.f{{font:500 11px 'Segoe UI',Ubuntu,'Hiragino Sans','Noto Sans JP',sans-serif;fill:#8b949e}}
 .sep{{stroke:#2dd4bf;stroke-opacity:.18}}
 .b{{fill:#2dd4bf}}
 </style>
 <rect width="{W}" height="{H}" rx="14" fill="url(#g)" stroke="#2dd4bf" stroke-opacity=".35"/>
-<text x="28" y="38" class="h">⚡ ACTIVITY</text>
-<text x="{W-28}" y="38" class="f" text-anchor="end">last 30 days ▸ updated {dt.date.today():%Y-%m-%d}</text>
+<text x="28" y="38" class="h">⚡ アクティビティ</text>
+<text x="{W-28}" y="38" class="f" text-anchor="end">直近 30 日 ▸ 更新 {dt.date.today():%Y-%m-%d}</text>
 {''.join(parts)}
 {''.join(bars)}
 </svg>'''
     os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)
-    with open(OUT, "w") as f:
+    with open(OUT, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"wrote {OUT}: total={total} current={current} longest={longest}")
 

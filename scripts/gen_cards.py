@@ -33,10 +33,10 @@ def frame(w, h, title, note, body):
 def highlights():
     W, H = 820, 190
     items = [
-        ("1,434", "PRs merged", "2026.05 – 10 / 約半年"),
-        ("~50", "PRs / week", "7月以降 週40〜77件で安定"),
-        ("12", "PRs / workday", "中央値"),
-        ("92", "CI checks", "レビュー指摘を自動チェック化"),
+        ("1,434", "マージした PR", "2026.05〜10 / 約半年"),
+        ("約50", "件 / 週", "7月以降 週40〜77件で安定"),
+        ("12", "件 / 稼働日", "中央値"),
+        ("92", "本の CI チェック", "レビュー指摘を自動チェック化"),
     ]
     col = W / len(items)
     body = []
@@ -46,16 +46,16 @@ def highlights():
                     f'<text x="{cx:.0f}" y="150" class="s">{s}</text>')
         if i:
             body.append(f'<line x1="{col*i:.0f}" y1="66" x2="{col*i:.0f}" y2="160" class="sep"/>')
-    return frame(W, H, "🚀 AI-DRIVEN OUTPUT", "量は AI で、質は CI で", "".join(body))
+    return frame(W, H, "🚀 AI で積み上げた成果", "量は AI で、質は CI で", "".join(body))
 
 
 def pipeline():
     W, H = 820, 250
     steps = [
-        ("Claude", "PLAN", "Issue を切り", "次にやることを決める", "box"),
-        ("Codex", "IMPLEMENT", "Issue から", "PR まで作る", "box"),
-        ("Copilot + Codex", "REVIEW", "別の AI が", "もう一度見て直す", "box"),
-        ("Human", "DECIDE", "マージするか", "最後の判断だけ", "hum"),
+        ("Claude", "計画", "Issue を切り", "次にやることを決める", "box"),
+        ("Codex", "実装", "Issue から", "PR まで作る", "box"),
+        ("Copilot + Codex", "レビュー", "別の AI が", "もう一度見て直す", "box"),
+        ("人", "判断", "マージするか", "最後の判断だけ", "hum"),
     ]
     bw, gap, x0, y0, bh = 170, 30, 28, 62, 120
     body = []
@@ -71,16 +71,16 @@ def pipeline():
             body.append(f'<line x1="{x+bw+4}" y1="{y0+bh/2}" x2="{x+bw+gap-4}" y2="{y0+bh/2}" class="ar"/>')
     body.append(f'<text x="{W/2}" y="222" class="tag" text-anchor="middle">'
                 'AI ごとに役割を分けて、止めずに動かし続ける ── 人が触るのは「入口」と「最後の判断」だけ</text>')
-    return frame(W, H, "🤖 MY AI PIPELINE", "multi-agent workflow", "".join(body))
+    return frame(W, H, "🤖 AI の役割分担", "マルチエージェント", "".join(body))
 
 
 def loop():
     W, H = 820, 230
     steps = [
-        ("☀️ 昼 / Human", ["受入条件と設計判断を", "曖昧さゼロまで issue に書く"]),
-        ("🏷️ Label", ["ready-for-loop を貼る", "ループが拾う対象を決める"]),
+        ("☀️ 昼 / 人", ["受入条件と設計判断を", "曖昧さゼロまで issue に書く"]),
+        ("🏷️ ラベル", ["ready-for-loop を貼る", "ループが拾う対象を決める"]),
         ("🌙 夜 / AI", ["寝る前に skill を 1 発", "無人で 1 件ずつ PR まで"]),
-        ("🌅 朝 / Review", ["AI レビューで 3 分類", "詰まりは理由付きで返る"]),
+        ("🌅 朝 / レビュー", ["AI レビューで 3 分類", "詰まりは理由付きで返る"]),
     ]
     bw, gap, x0, y0, bh = 170, 30, 28, 62, 104
     body = []
@@ -94,7 +94,7 @@ def loop():
         if i < len(steps) - 1:
             body.append(f'<line x1="{x+bw+4}" y1="{y0+bh/2}" x2="{x+bw+gap-4}" y2="{y0+bh/2}" class="ar"/>')
     body.append(f'<text x="{W/2}" y="204" class="tag" text-anchor="middle">昼は人間の時間、夜は AI の時間。── 朝には、レビュー待ちの PR が並んでいる</text>')
-    return frame(W, H, "🌙 LOOP ENGINEERING", "実装を夜中に片付ける仕組み", "".join(body))
+    return frame(W, H, "🌙 ループエンジニアリング", "実装を夜中に片付ける仕組み", "".join(body))
 
 
 if __name__ == "__main__":
